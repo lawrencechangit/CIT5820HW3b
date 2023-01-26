@@ -9,7 +9,9 @@ def sign(m):
 	#Your code here
 	keypair=fastecdsa.keys.gen_keypair(SECP256K1)
 	public_key = keypair[1]
+	print(public_key)
 
+	
 	#generate signature
 	#Your code here
 	signature=fastecdsa.ecdsa.sign(m, keypair[0], SECP256K1, hashlib.sha256, False)
