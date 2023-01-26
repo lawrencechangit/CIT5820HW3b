@@ -9,8 +9,6 @@ def sign(m):
 	#Your code here
 	keypair=keys.gen_keypair(curve=curve.secp256k1)
 	public_key = keypair[1]
-	print(public_key)
-
 	
 	#generate signature
 	#Your code here
