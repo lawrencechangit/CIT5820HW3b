@@ -7,14 +7,14 @@ from hashlib import sha256
 def sign(m):
 	#generate public key
 	#Your code here
-	keypair=keys.gen_keypair(curve=curve.SECP256K1)
+	keypair=keys.gen_keypair(curve=curve.secp256k1)
 	public_key = keypair[1]
 	print(public_key)
 
 	
 	#generate signature
 	#Your code here
-	signature=fastecdsa.ecdsa.sign(m, keypair[0], SECP256K1, hashlib.sha256, False)
+	signature=fastecdsa.ecdsa.sign(m, keypair[0], curve.secp256k1, hashlib.sha256, False)
 	r = signature[0]
 	s = signature[1]
 
