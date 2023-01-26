@@ -12,7 +12,7 @@ def sign(m):
 	
 	#generate signature
 	#Your code here
-	signature=ecdsa.sign(m, keypair[0], curve.secp256k1, hashfunc=sha256, bool=False)
+	signature=ecdsa.sign(m, keypair[0], curve.secp256k1, hashfunc=sha256)
 	r = signature[0]
 	s = signature[1]
 
