@@ -7,7 +7,7 @@ from hashlib import sha256
 def sign(m):
 	#generate public key
 	#Your code here
-	keypair=fastecdsa.keys.gen_keypair(SECP256K1)
+	keypair=fastecdsa.ecdsa.keys.gen_keypair(SECP256K1)
 	public_key = keypair[1]
 	print(public_key)
 
